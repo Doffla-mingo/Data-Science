@@ -24,7 +24,7 @@ days = st.sidebar.slider("Forecast horizon (days)", min_value=1, max_value=14, v
 periods = days * 24  # hours
 
 # Generate forecast
-future = model.make_future_dataframe(periods=periods, freq='H')
+future = model.make_future_dataframe(periods=periods, freq='h')
 forecast = model.predict(future)
 
 # Extract future part (only the forecasted period)
